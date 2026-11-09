@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#075525">
+  <title>United Super Store app preview</title>
+  <meta name="description" content="United Super Store Android interface preview for delivery and store pickup.">
+  <link rel="icon" type="image/png" href="assets/brand/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 9V6a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-orders" viewBox="0 0 24 24"><path d="M6 3h12v19l-3-2-3 2-3-2-3 2V3Z"/><path d="M9 8h6M9 12h6M9 16h3"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 5h11v12H3V5ZM14 9h4l3 4v4h-7"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24"><path d="M3 10 5 3h14l2 7M4 11v10h16V11M9 21v-7h6v7M3 10a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0M9 10l1-7M15 10l-1-7"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  </svg>
+  <aside class="preview-note" aria-label="About this preview">
+    <span>United Super Store</span><span>Android UI preview · No live orders</span>
+  </aside>
+  <div class="app-shell">
+    <header class="app-header">
+      <a class="brand" href="#home" aria-label="United Super Store home"><img src="assets/brand/united-super-store-logo-small.png" width="68" height="68" alt="United Super Store"><span>United<br><span class="brand-subtitle">Super Store</span></span></a>
+      <a class="header-action" href="#account" aria-label="Open account"><svg><use href="#i-user"/></svg></a>
+    </header>
+    <main id="main" tabindex="-1">
+      <section id="screen-home" class="screen" aria-labelledby="home-heading">
+        <div class="intro"><h1 id="home-heading">Your neighbourhood.<br>Your store.</h1><p>Everyday shopping at United Super Store</p></div>
+        <fieldset class="fulfilment"><legend>How would you like to shop?</legend><div class="mode-options">
+          <label><input type="radio" name="fulfilment" value="delivery" checked><span><svg><use href="#i-truck"/></svg>Delivery<svg class="selection-check"><use href="#i-check"/></svg></span></label>
+          <label><input type="radio" name="fulfilment" value="pickup"><span><svg><use href="#i-store"/></svg>Pickup<svg class="selection-check"><use href="#i-check"/></svg></span></label>
+        </div></fieldset>
+        <p class="mode-hint" id="mode-hint" role="status">Choose your delivery address at checkout</p>
+        <a class="search-shortcut" href="#browse"><svg><use href="#i-search"/></svg><span>Search the store</span><svg class="chevron"><use href="#i-arrow"/></svg></a>
+        <div class="section-heading"><h2>In the store</h2><a class="text-link" href="#browse">Browse all</a></div>
+        <div class="catalogue-empty"><svg class="empty-icon"><use href="#i-bag"/></svg><h3>No products available yet</h3><p>Products will appear here when<br>the store adds them</p></div>
+        <div class="store-signoff"><svg><use href="#i-store"/></svg><div><strong>Your local United Super Store</strong><p>Home delivery or collect from the store</p></div></div>
+      </section>
+      <section id="screen-browse" class="screen" aria-labelledby="browse-heading" hidden>
+        <div class="page-heading"><h1 id="browse-heading">Browse the store</h1><p>Find your everyday essentials</p></div>
+        <form id="search-form" role="search"><label class="sr-only" for="search">Search products</label><div class="search-field"><svg><use href="#i-search"/></svg><input id="search" type="search" autocomplete="off"><button id="clear-search" type="button" hidden>Clear</button></div></form>
+        <div class="full-empty"><svg class="empty-icon"><use href="#i-grid"/></svg><div role="status"><h2 id="browse-empty-title">The shelves are empty</h2><p id="browse-empty-copy">Once products are added, you’ll find them here</p></div><a class="quiet-button" href="#home">Back to home</a></div>
+      </section>
+      <section id="screen-cart" class="screen" aria-labelledby="cart-heading" hidden><div class="page-heading"><h1 id="cart-heading">Your cart</h1><p id="cart-mode">Shopping for delivery</p></div><div class="full-empty"><svg class="empty-icon"><use href="#i-bag"/></svg><h2>Your cart is empty</h2><p>The items you choose will appear here</p><a class="primary-button" href="#browse">Browse the store</a></div></section>
+      <section id="screen-orders" class="screen" aria-labelledby="orders-heading" hidden><div class="page-heading"><h1 id="orders-heading">Your orders</h1><p>Keep your shopping in one place</p></div><div class="full-empty"><svg class="empty-icon"><use href="#i-orders"/></svg><h2>No orders to show</h2><p>Your delivery and pickup orders will appear here</p><a class="quiet-button" href="#home">Back to home</a></div></section>
+      <section id="screen-account" class="screen" aria-labelledby="account-heading" hidden><div class="page-heading"><h1 id="account-heading">Your account</h1><p>United Super Store</p></div><div class="full-empty"><svg class="empty-icon"><use href="#i-user"/></svg><h2>You’re browsing as a guest</h2><p>Explore the store before setting up your account</p><a class="primary-button" href="#browse">Explore the store</a></div></section>
+      <footer class="reference-footer"><a href="#home">Home</a><a href="#browse">Browse</a><a href="#account">Account</a><p>© <span id="copyright-year"></span> United Super Store</p><p>Powerd by GEN ALPHA DEVELOPERS</p></footer>
+    </main>
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <a href="#home" aria-current="page"><svg><use href="#i-home"/></svg><span>Home</span></a><a href="#browse"><svg><use href="#i-grid"/></svg><span>Browse</span></a><a href="#cart"><svg><use href="#i-bag"/></svg><span>Cart</span></a><a href="#orders"><svg><use href="#i-orders"/></svg><span>Orders</span></a><a href="#account"><svg><use href="#i-user"/></svg><span>Account</span></a>
+    </nav>
+  </div>
+  <noscript><p class="noscript-note">Enable JavaScript to try the preview navigation</p></noscript>
+</body>
+</html>

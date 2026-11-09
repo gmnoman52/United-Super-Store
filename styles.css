@@ -1,0 +1,87 @@
+/* Hallmark · shape: app screen · theme: approved United brand · scope: app · surface: absolute · signature: linked-handle U shopping bag · v2.0.0 */
+/* Critique: neutral surfaces keep the empty catalogue honest; green distinguishes selection and actions. */
+/* Hallmark · waive 7b · Approved palette uses white surfaces and white button text · Preserve the accepted retail brand colours, with measured brand contrast of 8.99:1 */
+@import url('./design/tokens.css');
+* { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+body { margin: 0; background: var(--background); color: var(--text-primary); font-family: var(--font-body); font-size: 16px; line-height: 1.5; }
+svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+.icon-library { position: absolute; width: 0; height: 0; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+button, a, label { -webkit-tap-highlight-color: transparent; }
+a, button { transition: background-color 160ms ease, color 160ms ease; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
+[hidden] { display: none !important; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+button:disabled { background: var(--disabled-surface); color: var(--text-secondary); cursor: not-allowed; }
+h1 { font-size: 30px; line-height: 1.2; font-weight: 600; letter-spacing: -.7px; }
+h2 { font-size: 20px; line-height: 1.4; font-weight: 600; }
+h3 { font-size: 18px; font-weight: 500; }
+p { color: var(--text-secondary); }
+.preview-note { max-width: 1000px; margin: 24px auto; padding: 0 24px; display: flex; justify-content: space-between; gap: 16px; color: var(--text-secondary); font-size: 14px; }
+.preview-note span:first-child { font-weight: 600; color: var(--text-primary); }
+.app-shell { max-width: 480px; min-height: calc(100dvh - 96px); margin: 0 auto; background: var(--surface); border: 1px solid var(--divider); position: relative; }
+.app-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; border-bottom: 1px solid var(--divider); }
+.brand { display: inline-flex; align-items: center; gap: 12px; font-size: 20px; line-height: 1.15; font-weight: 600; color: var(--brand); }
+.brand img { width: 52px; height: 52px; object-fit: contain; }
+.brand-subtitle { font-size: 14px; font-weight: 500; }
+.header-action { width: 48px; height: 48px; display: grid; place-items: center; border: 1px solid var(--divider); border-radius: 12px; color: var(--text-secondary); }
+.header-action:hover { background: var(--background); }
+main { padding: 0 24px 112px; }
+main:focus { outline: none; }
+.intro { padding: 32px 0 28px; }
+.intro p { margin-top: 12px; font-size: 14px; }
+.fulfilment { margin: 0; padding: 0; border: 0; min-width: 0; }
+.fulfilment legend { padding: 0; margin-bottom: 12px; font-size: 14px; font-weight: 500; }
+.mode-options { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; }
+.mode-options label { position: relative; cursor: pointer; }
+.mode-options input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.mode-options label > span { display: flex; align-items: center; gap: 8px; height: 56px; padding: 0 12px; border: 1px solid var(--control-border); border-radius: 12px; font-size: 16px; font-weight: 500; }
+.mode-options input:checked + span { border-color: var(--brand); background: var(--selected-surface); color: var(--brand); }
+.selection-check { width: 16px; height: 16px; margin-left: auto; visibility: hidden; }
+.mode-options input:checked + span .selection-check { visibility: visible; }
+.mode-options label:has(input:focus-visible) { outline: 2px solid var(--focus); outline-offset: 4px; border-radius: 12px; }
+.mode-options label:hover > span { background: var(--background); }
+.mode-options label:active > span { border-color: var(--brand-pressed); }
+.mode-hint { font-size: 12px; color: var(--text-muted); margin-top: 12px; min-height: 20px; }
+.search-shortcut, .search-field { margin-top: 24px; display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 0 16px; background: var(--background); border: 1px solid var(--control-border); border-radius: 12px; color: var(--text-secondary); }
+.search-shortcut:hover { border-color: var(--brand); }
+.search-shortcut span { flex: 1; }
+.chevron { width: 16px; height: 16px; }
+.section-heading { margin: 32px 0 12px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.text-link { min-height: 44px; display: inline-flex; align-items: center; color: var(--brand); font-size: 14px; font-weight: 500; text-decoration: underline; text-underline-offset: 4px; }
+.catalogue-empty { min-height: 228px; padding: 28px 16px; text-align: center; background: var(--background); border-radius: 16px; }
+.empty-icon { width: 48px; height: 48px; color: var(--brand); margin-bottom: 16px; }
+.catalogue-empty p { font-size: 14px; margin-top: 8px; }
+.store-signoff { display: flex; gap: 12px; padding: 24px 0 8px; color: var(--text-muted); align-items: center; }
+.store-signoff strong { font-size: 14px; font-weight: 500; color: var(--text-primary); }
+.store-signoff p { font-size: 12px; margin-top: 4px; }
+.bottom-nav { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 480px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); padding: 8px 8px max(12px, env(safe-area-inset-bottom)); background: var(--surface); border-top: 1px solid var(--divider); z-index: 2; }
+.bottom-nav a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 56px; color: var(--text-muted); font-size: 12px; border-radius: 12px; }
+.bottom-nav a[aria-current="page"] { color: var(--brand); background: var(--selected-surface); font-weight: 600; }
+.bottom-nav a:hover { color: var(--brand); }
+.bottom-nav a:active { background: var(--selected-surface); }
+.page-heading { padding-top: 32px; }
+.page-heading h1 { font-size: 28px; }
+.page-heading p { margin-top: 8px; font-size: 14px; }
+.full-empty { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 72px 8px 40px; }
+.full-empty p { margin-top: 12px; max-width: 280px; font-size: 16px; }
+.primary-button, .quiet-button { display: inline-flex; min-height: 48px; padding: 12px 24px; align-items: center; justify-content: center; border-radius: 12px; margin-top: 28px; font-weight: 500; }
+.primary-button { background: var(--brand); color: var(--on-brand); }
+.primary-button:hover, .primary-button:active { background: var(--brand-pressed); }
+.quiet-button { border: 1px solid var(--control-border); color: var(--brand); }
+.quiet-button:hover, .quiet-button:active { background: var(--selected-surface); }
+.search-field { padding-right: 8px; }
+.search-field input { width: 100%; min-width: 0; min-height: 48px; border: 0; background: transparent; color: var(--text-primary); }
+.search-field input::placeholder { color: var(--text-muted); }
+.search-field button { border: 0; background: transparent; color: var(--brand); min-height: 44px; padding: 0 8px; cursor: pointer; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; clip-path: inset(50%); white-space: nowrap; }
+.noscript-note { padding: 24px; text-align: center; }
+@media (max-width: 540px) { .preview-note { margin: 0; padding: 8px 16px; justify-content: center; font-size: 12px; } .preview-note span:first-child { display: none; } .app-shell { min-height: calc(100dvh - 36px); border: 0; } }
+@media (max-width: 360px) { main { padding-inline: 16px; } .app-header { padding-inline: 16px; } h1 { font-size: 28px; } .mode-options { gap: 8px; } .mode-options label > span { padding-inline: 8px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
+
+.reference-footer { margin-top:32px; padding-top:24px; border-top:1px solid var(--divider); font-size:13px; overflow-wrap:anywhere; }
+.reference-footer a { display:inline-flex; min-height:44px; align-items:center; margin-right:16px; color:var(--brand); }

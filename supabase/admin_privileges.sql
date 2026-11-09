@@ -1,0 +1,10 @@
+revoke all on private.admin_users from anon, authenticated;
+grant select on private.admin_users to authenticated;
+revoke all on public.categories from anon, authenticated;
+grant select on public.categories to anon, authenticated;
+grant insert, update, delete on public.categories to authenticated;
+revoke all on public.orders from anon, authenticated;
+grant select on public.orders to authenticated;
+revoke all on public.store_settings from anon, authenticated;
+grant select on public.store_settings to anon, authenticated;
+grant update on public.store_settings to authenticated;

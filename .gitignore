@@ -1,0 +1,13 @@
+node_modules/
+.expo/
+dist/
+dist-android/
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+*.apk
+.hallmark/
+mobile/.claude/
+mobile/android/
+mobile/ios/

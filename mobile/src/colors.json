@@ -1,0 +1,19 @@
+{
+  "brand": "#075525",
+  "brandPressed": "#043D1A",
+  "onBrand": "#FFFFFF",
+  "background": "#F7F8F7",
+  "surface": "#FFFFFF",
+  "selectedSurface": "#EAF3EC",
+  "textPrimary": "#19221C",
+  "textSecondary": "#505C53",
+  "textMuted": "#667169",
+  "divider": "#DFE4DF",
+  "controlBorder": "#7D897F",
+  "focus": "#075525",
+  "success": "#166534",
+  "warning": "#854D0E",
+  "error": "#B42318",
+  "disabledSurface": "#E5E9E5",
+  "disabledText": "#667169"
+}
